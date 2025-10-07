@@ -1,13 +1,17 @@
 # 🚀 Python Beginners Project – Tutorial 3
 
-Welcome to **Python Beginners Project**! 🎉  
-This tutorial series now covers up to **working with CSV files**.
+Welcome to **Python Beginners Project – Tutorial 3**! 🎉  
+This tutorial series now includes **working with CSV files** while continuing to reinforce basics from previous tutorials.
+
+[![GitHub stars](https://img.shields.io/github/stars/Adrijan-Petek/python-beginners-pt3?style=social)](https://github.com/Adrijan-Petek/python-beginners-pt3/stargazers)
+[![Workflow Status](https://github.com/Adrijan-Petek/python-beginners-pt3/actions/workflows/python-app.yml/badge.svg)](https://github.com/Adrijan-Petek/python-beginners-pt3/actions/workflows/python-app.yml)
+[![Python Version](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
 
 ---
 
 ## 📂 Project Structure
 
-```
+```plaintext
 python-beginners/
 ├── .github/
 │   └── workflows/
@@ -15,87 +19,112 @@ python-beginners/
 ├── simple_example.py        # Tutorial 1: Basics
 ├── file_example.py          # Tutorial 2: Files
 ├── csv_example.py           # Tutorial 3: CSV Files
-└── README.md                # Instructions
+└── README.md                # Project instructions
+````
+
+---
+
+## ▶️ Step 1: Prerequisites
+
+* Python **3.10+**
+
+  ```bash
+  python --version
+  ```
+* Git (for cloning repository)
+
+  ```bash
+  git --version
+  ```
+
+---
+
+## ▶️ Step 2: Clone the Repository
+
+```bash
+git clone https://github.com/Adrijan-Petek/python-beginners-pt3.git
+cd python-beginners-pt3
 ```
 
 ---
 
-## ▶️ How to Run Locally
-
-1. Make sure you have **Python 3.10+** installed.  
-2. Navigate to the project folder in terminal:
-
-```bash
-cd path/to/python-beginners
-```
-3. Run the CSV example script:
+## ▶️ Step 3: Run the CSV Example
 
 ```bash
 python csv_example.py
 ```
 
-4. Check the newly created `students.csv` in the folder.  
-5. Observe the output printed in the terminal.
+This will:
+
+1. Create a CSV file `students.csv`
+2. Write tabular student data
+3. Append additional rows
+4. Read and display data in two ways:
+
+   * Using `csv.reader`
+   * Using `csv.DictReader` for easy column access
+
+**Example terminal output:**
+
+```plaintext
+Name,Age,Grade
+Alice,20,A
+Bob,22,B
+Charlie,21,A-
+Number of students: 3
+Student Names: ['Alice', 'Bob', 'Charlie']
+```
+
+You can also open `students.csv` in your folder to see the tabular data.
 
 ---
 
-## 📖 What You’ll Learn
+## 🌟 What You’ll Learn
 
-### Tutorial 1 (simple_example.py)
-- Taking user input  
-- Printing messages  
+### Tutorial 1 – `simple_example.py`
 
-### Tutorial 2 (file_example.py)
-- Creating a new text file  
-- Writing lines to a file (`w`)  
-- Appending lines to a file (`a`)  
-- Reading the file content (`r`)  
-- Counting lines and basic text manipulation  
+* Taking user input
+* Printing messages
 
-### Tutorial 3 (csv_example.py)
-- Writing tabular data into a CSV file  
-- Appending rows  
-- Reading CSVs with `csv.reader`  
-- Reading CSVs as dictionaries (`csv.DictReader`) for easy column access  
+### Tutorial 2 – `file_example.py`
+
+* Creating a new text file
+* Writing lines (`w`)
+* Appending lines (`a`)
+* Reading file content (`r`)
+* Counting lines
+
+### Tutorial 3 – `csv_example.py`
+
+* Writing tabular data into a CSV file
+* Appending rows
+* Reading CSVs with `csv.reader`
+* Reading CSVs as dictionaries (`csv.DictReader`) for easy column access
 
 ---
 
 ## 🤖 GitHub Actions CI/CD
 
-The workflow automatically runs all three tutorials on every push to main.
+Workflow runs **all three tutorials** automatically on every push to `main`:
+
+* `.github/workflows/python-app.yml`
+* Ensures scripts run correctly
+* Beginner-friendly introduction to CI/CD automation
 
 ---
 
-### **GitHub Actions workflow** (`python-app.yml`)  
+## 💡 Tips
 
-```yaml
-name: Python application
+* Modify `csv_example.py` to add more students or columns.
+* Practice reading only specific columns using `DictReader`.
+* Extend the workflow to run tests or validate CSV content.
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+---
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+## ❤️ Contribute
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
+Open issues, submit pull requests, or **star the repo** ⭐
 
-    - name: Run simple_example.py
-      run: python simple_example.py <<< "World"
+[Visit the GitHub repository »](https://github.com/Adrijan-Petek/python-beginners-pt3)
 
-    - name: Run file_example.py
-      run: python file_example.py
-
-    - name: Run csv_example.py
-      run: python csv_example.py
-```
-
-Happy learning Python! ❤️
+````
